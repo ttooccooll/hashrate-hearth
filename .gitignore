@@ -1,0 +1,5 @@
+.DS_Store
+.claude/
+.vercel/
+# built by make-site.py (Vercel runs it on every deploy)
+site/
