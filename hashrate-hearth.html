@@ -869,6 +869,7 @@ b.live{font-weight:700}
         <div class="maker"><b>Canaan Avalon</b><p>The Nano 3S, Mini 3 and Avalon Q are home miners with quiet modes and app control, from 140 W desk units up to a 90 TH/s, 1.7 kW machine.</p><div class="mk-links"><a class="mk-link" href="https://shop.canaan.io/products?categories=avalon-home" target="_blank" rel="noopener">shop.canaan.io ↗</a></div></div>
         <div class="maker"><b>Heatbit</b><p>Mining space heaters with air purifiers built in, up to 60 TH/s in the Maxi Pro. Next is the Bitwater, a fanless water-heater element with a miner built in: up to 34 TH/s, shipping in early 2027. Miners that look like appliances.</p><div class="mk-links"><a class="mk-link" href="https://heatbit.com/" target="_blank" rel="noopener">heatbit.com ↗</a></div></div>
         <div class="maker"><b>Hashrate House</b><p>The HashTub immersion heater and the Aqueon hydro system, which sits under your water heater, turn a miner's heat into hot water, radiant floors, forced air or a hot tub.</p><div class="mk-links"><a class="mk-link" href="https://www.hashratehouse.com/" target="_blank" rel="noopener">hashratehouse.com ↗</a></div></div>
+        <div class="maker"><b>FutureBit</b><p>The Apollo III is a quiet desktop miner with a full node and its own solo pool built in, so its hash works on a template your own node builds. Up to 18 TH/s, on ASICs designed in the US.</p><div class="mk-links"><a class="mk-link" href="https://www.futurebit.io/apollo-3" target="_blank" rel="noopener">futurebit.io ↗</a></div></div>
         <div class="maker"><b>Exergy</b><p>Building-integrated miners that offset heating bills and soak up excess solar, plus open-source Home Assistant integrations for OCEAN, the DATUM gateway, Bitaxe, Avalon, Braiins and more.</p><div class="mk-links"><a class="mk-link" href="https://www.exergyheat.com/" target="_blank" rel="noopener">exergyheat.com ↗</a><a class="mk-link" href="https://github.com/exergyheat" target="_blank" rel="noopener">Home Assistant code on GitHub ↗</a></div></div>
       </div>
     </div>
@@ -949,8 +950,8 @@ b.live{font-weight:700}
       <li><a href="https://www.osti.gov/biblio/1356936" target="_blank" rel="noopener">ORNL cold-climate heat pump field study</a>: seasonal COP 3.16</li>
       <li><a href="https://www.eia.gov/todayinenergy/detail.php?id=57321" target="_blank" rel="noopener">EIA RECS 2020</a>: household heating energy</li>
       <li>EnergySage via pv-magazine-usa (11.7 kW median, $2.48/W) · NREL ATB residential PV capacity factor</li>
-      <li><a href="https://asicminervalue.com/" target="_blank" rel="noopener">asicminervalue</a>, Kryptex, D-Central, <a href="https://www.canaan.io/" target="_blank" rel="noopener">Canaan</a>, Bitmain and <a href="https://heatbit.com/" target="_blank" rel="noopener">Heatbit</a> spec pages</li>
-      <li>Home mining makers: <a href="https://shop.canaan.io/products?categories=avalon-home" target="_blank" rel="noopener">Canaan Avalon Home</a>, <a href="https://heatbit.com/" target="_blank" rel="noopener">Heatbit</a>, <a href="https://www.hashratehouse.com/" target="_blank" rel="noopener">Hashrate House</a>, <a href="https://www.exergyheat.com/" target="_blank" rel="noopener">Exergy</a> (<a href="https://github.com/exergyheat" target="_blank" rel="noopener">its Home Assistant integrations</a>)</li>
+      <li><a href="https://asicminervalue.com/" target="_blank" rel="noopener">asicminervalue</a>, Kryptex, D-Central, <a href="https://www.canaan.io/" target="_blank" rel="noopener">Canaan</a>, <a href="https://shop.bitmain.com/" target="_blank" rel="noopener">Bitmain</a> and <a href="https://heatbit.com/" target="_blank" rel="noopener">Heatbit</a> spec pages</li>
+      <li>Home mining makers: <a href="https://shop.canaan.io/products?categories=avalon-home" target="_blank" rel="noopener">Canaan Avalon Home</a>, <a href="https://heatbit.com/" target="_blank" rel="noopener">Heatbit</a>, <a href="https://www.hashratehouse.com/" target="_blank" rel="noopener">Hashrate House</a>, <a href="https://www.futurebit.io/apollo-3" target="_blank" rel="noopener">FutureBit</a>, <a href="https://www.exergyheat.com/" target="_blank" rel="noopener">Exergy</a> (<a href="https://github.com/exergyheat" target="_blank" rel="noopener">its Home Assistant integrations</a>)</li>
       <li><a href="https://hashrateindex.com/blog/global-hashrate-heatmap-update-q1-2026/" target="_blank" rel="noopener">Hashrate Index global hashrate heatmap, Q1 2026</a></li>
       <li><a href="https://onrampbitcoin.com/research/how-many-people-own-bitcoin-global-ownership-statistics-and-what-they-mean" target="_blank" rel="noopener">Onramp: how many people own bitcoin</a></li>
     </ul>
@@ -1002,6 +1003,7 @@ const MACHINES = [
  {id:'gt',    name:'Bitaxe GT', k:'Learning', th:2.15, w:40},
  {id:'nerdq', name:'NerdQaxe++', k:'Learning', th:4.8, w:76},
  {id:'nano3s',name:'Avalon Nano 3S', k:'Learning', th:6, w:140},
+ {id:'apollo3',name:'FutureBit Apollo III', k:'Heater', th:18, w:375}, // futurebit.io: Turbo ~16-18 TH/s at 375 W (Eco ~10-12 TH/s at 150 W)
  {id:'bitwater',name:'Heatbit Bitwater (preorder)', k:'Heater', th:34, w:600}, // heatbit.com: up to 34 TH/s, up to 600 W, ships Q1 2027
  {id:'mini3', name:'Avalon Mini 3', k:'Heater', th:37.5, w:800},
  {id:'heatbit',name:'Heatbit Maxi Pro', k:'Heater', th:60, w:1500},
@@ -1009,8 +1011,11 @@ const MACHINES = [
  {id:'s9',    name:'Antminer S9 (used)', k:'Used', th:13.5, w:1323},
  {id:'s19jp', name:'S19j Pro (used)', k:'Used', th:104, w:3068},
  {id:'s19kpro',name:'S19k Pro (used)', k:'Used', th:120, w:2760},
+ {id:'s19xp', name:'S19 XP (used)', k:'Used', th:140, w:3010},
+ {id:'t21',   name:'Antminer T21 (used)', k:'Used', th:190, w:3610},
  {id:'s21',   name:'Antminer S21', k:'New', th:200, w:3500},
  {id:'s21p',  name:'Antminer S21 Pro', k:'New', th:234, w:3510},
+ {id:'s21xp', name:'Antminer S21 XP', k:'New', th:270, w:3645},
  {id:'xphyd', name:'S21 XP Hydro', k:'New', th:473, w:5676},
  {id:'s23hyd',name:'S23 Hydro', k:'New', th:580, w:5510},
 ];
@@ -1489,6 +1494,7 @@ function renderHearth(){
   $('#o-vnote').textContent=vn;
   const load=m.w*h.units, fit=CIRCUITS.find(c=>c[1]>=load);
   $('#o-circuit').innerHTML= m.id==='bitwater' ? `<b>Wiring:</b> none to add. It screws into the lower element port of an electric tank water heater (30 to 80 gallons) and runs on that heater's existing circuit, and its controller plugs into an ordinary outlet. Heatbit puts the swap at 30 to 45 minutes.`
+    : load<=720 ? `<b>Wiring:</b> ${fmt(load)} W plugs into an ordinary 120 V outlet. That's about ${Math.max(1,Math.round(load/1440*100))}% of what a standard 15 A circuit can carry continuously, so it doesn't need a circuit of its own.`
     : fit ? `<b>Wiring:</b> ${fmt(load)} W fits a dedicated <b>${fit[0]}</b> circuit, which allows ${fmt(fit[1])} W of continuous load.${fit[1]>1920?' Most full-size miners run on 240 V.':' That\'s standard 120 V household wiring, on a circuit of its own.'}` : `<b>Wiring:</b> ${fmt(load)} W needs more than one dedicated circuit.`;
 }
 const hearthChanged=()=>{ renderHearth(); renderImpact(); flash(); };
@@ -1569,7 +1575,7 @@ function renderImpact(){
 const SETUPS=[
  {id:'datum',g:'warm',name:'OCEAN + DATUM',ex:'DATUM Gateway on your node',home:true,tplAt:'home',pool:'OCEAN pays out (TIDES)',payout:'Pooled, steady',who:'You',note:'DATUM Gateway on your own node builds the block template. OCEAN only counts your shares and pays you. Switch pools and your template choices go with you.'},
  {id:'jd',g:'warm',name:'Stratum V2 + Job Declaration',ex:'Braiins, DMND',home:true,tplAt:'home',pool:'Pool pays for shares',payout:'Pooled, steady',who:'You',note:'Your node builds the template and declares it to the pool, which pays you for shares on your job. The first known production JD block was mined in June 2026.'},
- {id:'solo-own',g:'warm',name:'Solo on your own node',ex:'Public Pool, ckpool, self-hosted',home:true,tplAt:'home',pool:'No pool',payout:'Lottery: whole block or nothing',who:'You',note:'Your node builds the template and your hash works on it alone. Full control, but income arrives as one rare jackpot: an S21 mining solo finds a block about once a century.'},
+ {id:'solo-own',g:'warm',name:'Solo on your own node',ex:'Public Pool, ckpool, FutureBit Apollo',home:true,tplAt:'home',pool:'No pool',payout:'Lottery: whole block or nothing',who:'You',note:'Your node builds the template and your hash works on it alone. Full control, but income arrives as one rare jackpot: an S21 mining solo finds a block about once a century.'},
  {id:'ocean',g:'mid',name:'OCEAN without DATUM',ex:'You pick Core, Knots or filtered',home:false,tplAt:'pool',pool:'OCEAN builds & pays',payout:'Pooled, steady',who:'OCEAN',note:'OCEAN builds the template from a policy you choose. That keeps your hash out of the big two, but one operator still decides.'},
  {id:'solo-hosted',g:'mid',name:'Hosted solo pool',ex:'solo.ckpool, Braiins Solo',home:false,tplAt:'pool',pool:'Operator builds',payout:'Lottery: whole block or nothing',who:'Pool operator',note:'The operator\'s node builds the template. It\'s small and outside the big groups, but it isn\'t you.'},
  {id:'sv2t',g:'cold',name:'Stratum V2, transport only',ex:'Encrypted connection',home:false,tplAt:'pool',pool:'Pool builds & pays',payout:'Pooled, steady',who:'The pool',note:'SV2 encrypts the miner-to-pool connection, so nobody in between can steal or redirect your hash. The pool still picks every transaction. Many SV2 setups use only this mode.'},
